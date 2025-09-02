@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Fire Max Rewards - Free Skins & Diamonds 2025</title>
+    <title>Free Fire Max Rewards - Free Skins & Diamonds Generator 2025</title>
     <meta name="description" content="Get FREE Fire Max rewards instantly! Claim premium skins, unlimited diamonds, legendary characters & exclusive items. No survey required - 100% safe & secure rewards generator.">
-    <meta name="keywords" content="Free Fire Max rewards, free diamonds, free skins, Free Fire Max generator, premium rewards, legendary skins, epic characters, battle pass free, Weekly rewards, instant delivery, no survey, safe generator, Free Fire Max hack, unlimited diamonds, exclusive skins, character bundles, weapon skins, emotes free, Free Fire Max coins, premium bundle, legendary character, epic weapon, rare bundle, exclusive items, Weekly claims, instant rewards, secure generator, safe rewards, authentic items, premium quality, guaranteed delivery">
+    <meta name="keywords" content="Free Fire Max rewards, free diamonds, free skins, Free Fire Max generator, premium rewards, legendary skins, epic characters, battle pass free, daily rewards, instant delivery, no survey, safe generator, Free Fire Max hack, unlimited diamonds, exclusive skins, character bundles, weapon skins, emotes free, Free Fire Max coins, premium bundle, legendary character, epic weapon, rare bundle, exclusive items, daily claims, instant rewards, secure generator, safe rewards, authentic items, premium quality, guaranteed delivery">
     <meta property="og:title" content="Free Fire Max Rewards - Free Skins & Diamonds Generator 2025">
     <meta property="og:description" content="Claim unlimited Free Fire Max rewards! Premium skins, free diamonds, legendary characters & exclusive items. Instant delivery guaranteed!">
     <meta property="og:type" content="website">
@@ -14,7 +14,7 @@
     <meta name="twitter:description" content="Get premium Free Fire Max rewards for free! Skins, diamonds, characters & more. No survey required!">
     <link rel="canonical" href="https://your-domain.com">
     <!-- Added Free Fire official favicon -->
-    <link rel="icon" href="https://play-lh.googleusercontent.com/8DpGXMVFd5vSb47uMMwjXpMHCYNnBPblPBghEoXBrnuf4DLxA7_qfp-rxV7Rsh5hjQZcmlX4jy-SKu3geOmg7A" type="image/x-icon">
+    <link rel="icon" href="https://www.freefiremobile.com/favicon.ico" type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -160,6 +160,9 @@
             animation: slideInFromLeft 1s ease-out, glow 4s ease-in-out infinite 1s;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
+        .section-title.diamonds {
+            animation: slideInFromRight 1s ease-out, glow 4s ease-in-out infinite 1s;
+        }
         .section-subtitle {
             font-size: 1.125rem;
             color: #bfdbfe;
@@ -174,6 +177,15 @@
             gap: 1.5rem;
             margin-bottom: 5rem;
             max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .diamonds-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 5rem;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -265,6 +277,66 @@
             color: #60a5fa;
             border: 1px solid rgba(59, 130, 246, 0.3);
         }
+        /* Diamond Card Styles */
+        .diamond-card {
+            text-align: center;
+            position: relative;
+        }
+        .diamond-card.popular {
+            border-color: rgba(251, 191, 36, 0.5);
+            box-shadow: 0 10px 25px rgba(251, 191, 36, 0.25);
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: black;
+            font-size: 0.875rem;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            z-index: 20;
+        }
+        .diamond-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            margin: 0 auto 1rem;
+            color: #06b6d4;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .diamond-card.popular .diamond-icon {
+            color: #fbbf24;
+        }
+        .diamond-amount {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .card:hover .diamond-amount {
+            color: #06b6d4;
+        }
+        .diamond-card.popular:hover .diamond-amount {
+            color: #fbbf24;
+        }
+        .diamond-bonus {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #06b6d4;
+            margin-bottom: 1rem;
+        }
+        .diamond-card.popular .diamond-bonus {
+            color: #fbbf24;
+        }
+        .diamond-price {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #10b981;
+            margin-bottom: 1.2rem;
+        }
         /* Button Styles */
         .claim-btn {
             width: 100%;
@@ -304,6 +376,26 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+        }
+        .diamond-claim-btn {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            color: white;
+        }
+        .diamond-claim-btn::before {
+            background: linear-gradient(135deg, #0891b2, #0e7490);
+        }
+        .diamond-claim-btn:hover {
+            box-shadow: 0 15px 30px rgba(6, 182, 212, 0.5);
+        }
+        .popular .diamond-claim-btn {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: black;
+        }
+        .popular .diamond-claim-btn::before {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        .popular .diamond-claim-btn:hover {
+            box-shadow: 0 15px 30px rgba(251, 191, 36, 0.5);
         }
         /* CTA Section */
         .cta-section {
@@ -484,6 +576,10 @@
                 transform: scale(1);
             }
         }
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
         @keyframes blink {
             0%, 50% { border-color: transparent; }
             51%, 100% { border-color: #fbbf24; }
@@ -508,13 +604,19 @@
             .cta-title {
                 font-size: 2rem;
             }
-            .skins-grid {
+            /* Ensure 2x2 layout on mobile */
+            .skins-grid,
+            .diamonds-grid {
                 grid-template-columns: repeat(2, 1fr);
                 max-width: 500px;
                 gap: 1.2rem;
             }
             .card {
                 padding: 1.3rem;
+            }
+            .diamond-icon {
+                width: 3.2rem;
+                height: 3.2rem;
             }
             .claim-btn {
                 padding: 0.8rem 1.1rem;
@@ -531,8 +633,9 @@
             .subtitle {
                 font-size: 1rem;
             }
-            .skins-grid {
-                grid-template-columns: 1fr;
+            .skins-grid,
+            .diamonds-grid {
+                grid-template-columns: repeat(2, 1fr);
                 max-width: 100%;
                 gap: 1rem;
             }
@@ -541,6 +644,12 @@
             }
             .skin-title {
                 font-size: 1.05rem;
+            }
+            .diamond-amount {
+                font-size: 1.3rem;
+            }
+            .diamond-price {
+                font-size: 1.5rem;
             }
             .claim-btn {
                 padding: 0.8rem 1rem;
@@ -563,6 +672,83 @@
         .icon-xl {
             width: 3rem;
             height: 3rem;
+        }
+
+        /* Modal Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal.show {
+            opacity: 1;
+        }
+        .modal-content {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            transform: translateY(-20px);
+            animation: modalFadeIn 0.4s ease-out forwards;
+        }
+        @keyframes modalFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .modal h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .modal p {
+            color: #bfdbfe;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        .modal input {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+        .modal input::placeholder {
+            color: #93c5fd;
+        }
+        .modal button {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: black;
+            font-weight: 700;
+            padding: 0.9rem 1.5rem;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            width: 100%;
+        }
+        .modal button:hover {
+            transform: scale(1.03);
         }
     </style>
 </head>
@@ -589,7 +775,7 @@
                     </svg>
                 </div>
                 <p class="subtitle">
-                    Unlock Premium Free Fire Max Skins, Diamonds & Exclusive Rewards - 100% Free Weekly Claims Available Now! 
+                    Unlock Premium Free Fire Max Skins, Diamonds & Exclusive Rewards - 100% Free Daily Claims Available Now! 
                     Get Legendary Skins, Free Diamonds, Battle Pass Items & More Premium Rewards for Free Fire Max Players
                 </p>
                 <div class="features-row">
@@ -629,9 +815,9 @@
                     <div class="card" style="animation-delay: 0.1s;">
                         <div class="card-content">
                             <div class="skin-image">
-                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f75eb2d6-d8fc-478f-8465-3fb52b68408f/df8razz-87bca9a7-2aae-45eb-a2c2-761e3ba9fb23.png/v1/fill/w_1280,h_1280/m4a1___red_griffin_skin_png_by_battlegroundpnh_df8razz-fullview.png" alt="M4a1 - Red Griffin - Premium Free Fire Max Skin">
+                                <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Elite Dragon Hunter - Premium Free Fire Max Skin">
                             </div>
-                            <h3 class="skin-title">M4a1 - Red Griffin</h3>
+                            <h3 class="skin-title">Elite Dragon Hunter</h3>
                             <div class="rarity-badge legendary" style="display: flex; align-items: center; justify-content: center;">
                                 <svg class="icon" style="width: 1rem; height: 1rem; margin-right: 0.25rem;" viewBox="0 0 24 24">
                                     <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
@@ -651,9 +837,9 @@
                     <div class="card" style="animation-delay: 0.2s;">
                         <div class="card-content">
                             <div class="skin-image">
-                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f75eb2d6-d8fc-478f-8465-3fb52b68408f/df88fu7-080ec188-b6b9-4764-aee1-a79e5b4984d8.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y3NWViMmQ2LWQ4ZmMtNDc4Zi04NDY1LTNmYjUyYjY4NDA4ZlwvZGY4OGZ1Ny0wODBlYzE4OC1iNmI5LTQ3NjQtYWVlMS1hNzllNWI0OTg0ZDgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lyRAjfa-nCgfq6oUMZTsdL2da5TZ5N4wAEp-u_kBU2w" alt="M1887- Knockout Night - Premium Free Fire Max Skin">
+                                <img src="https://images.pexels.com/photos/5240544/pexels-photo-5240544.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cyber Phantom Suit - Premium Free Fire Max Skin">
                             </div>
-                            <h3 class="skin-title">M1887- Knockout Night</h3>
+                            <h3 class="skin-title">Cyber Phantom Suit</h3>
                             <div class="rarity-badge epic" style="display: flex; align-items: center; justify-content: center;">
                                 <svg class="icon" style="width: 1rem; height: 1rem; margin-right: 0.25rem;" viewBox="0 0 24 24">
                                     <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
@@ -673,9 +859,9 @@
                     <div class="card" style="animation-delay: 0.3s;">
                         <div class="card-content">
                             <div class="skin-image">
-                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f75eb2d6-d8fc-478f-8465-3fb52b68408f/df90hf1-0ce50adb-c55d-45db-a5ee-6c875d47209a.png/v1/fill/w_1280,h_1280/awm___revolt_skin_png_by_battlegroundpnh_df90hf1-fullview.png" alt="AWM - Revolt - Premium Free Fire Max Skin">
+                                <img src="https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Neon Assassin Gear - Premium Free Fire Max Skin">
                             </div>
-                            <h3 class="skin-title">AWM - Revolt</h3>
+                            <h3 class="skin-title">Neon Assassin Gear</h3>
                             <div class="rarity-badge rare" style="display: flex; align-items: center; justify-content: center;">
                                 <svg class="icon" style="width: 1rem; height: 1rem; margin-right: 0.25rem;" viewBox="0 0 24 24">
                                     <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
@@ -692,9 +878,199 @@
                             </button>
                         </div>
                     </div>
+                    <div class="card" style="animation-delay: 0.4s;">
+                        <div class="card-content">
+                            <div class="skin-image">
+                                <img src="https://images.pexels.com/photos/4009598/pexels-photo-4009598.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Golden Warrior Set - Premium Free Fire Max Skin">
+                            </div>
+                            <h3 class="skin-title">Golden Warrior Set</h3>
+                            <div class="rarity-badge legendary" style="display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon" style="width: 1rem; height: 1rem; margin-right: 0.25rem;" viewBox="0 0 24 24">
+                                    <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
+                                </svg>
+                                Legendary
+                            </div>
+                            <button class="claim-btn" onclick="openModal('Golden Warrior Set')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M20 12V8H6A2 2 0 0 1 4 6V4A2 2 0 0 1 6 2H12V4H6V6H20V8H6A2 2 0 0 0 4 10V18A2 2 0 0 0 6 20H20A2 2 0 0 0 22 18V12A2 2 0 0 0 20 10Z"/>
+                                    </svg>
+                                    CLAIM SKIN
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card" style="animation-delay: 0.5s;">
+                        <div class="card-content">
+                            <div class="skin-image">
+                                <img src="https://images.pexels.com/photos/3686769/pexels-photo-3686769.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shadow Strike Bundle - Premium Free Fire Max Skin">
+                            </div>
+                            <h3 class="skin-title">Shadow Strike Bundle</h3>
+                            <div class="rarity-badge epic" style="display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon" style="width: 1rem; height: 1rem; margin-right: 0.25rem;" viewBox="0 0 24 24">
+                                    <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
+                                </svg>
+                                Epic
+                            </div>
+                            <button class="claim-btn" onclick="openModal('Shadow Strike Bundle')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M20 12V8H6A2 2 0 0 1 4 6V4A2 2 0 0 1 6 2H12V4H6V6H20V8H6A2 2 0 0 0 4 10V18A2 2 0 0 0 6 20H20A2 2 0 0 0 22 18V12A2 2 0 0 0 20 10Z"/>
+                                    </svg>
+                                    CLAIM SKIN
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card" style="animation-delay: 0.6s;">
+                        <div class="card-content">
+                            <div class="skin-image">
+                                <img src="https://images.pexels.com/photos/4792508/pexels-photo-4792508.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Frost Walker Outfit - Premium Free Fire Max Skin">
+                            </div>
+                            <h3 class="skin-title">Frost Walker Outfit</h3>
+                            <div class="rarity-badge rare" style="display: flex; align-items: center; justify-content: center;">
+                                <svg class="icon" style="width: 1rem; height: 1rem; margin-right: 0.25rem;" viewBox="0 0 24 24">
+                                    <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
+                                </svg>
+                                Rare
+                            </div>
+                            <button class="claim-btn" onclick="openModal('Frost Walker Outfit')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M20 12V8H6A2 2 0 0 1 4 6V4A2 2 0 0 1 6 2H12V4H6V6H20V8H6A2 2 0 0 0 4 10V18A2 2 0 0 0 6 20H20A2 2 0 0 0 22 18V12A2 2 0 0 0 20 10Z"/>
+                                    </svg>
+                                    CLAIM SKIN
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
-
+            <!-- Diamonds Section -->
+            <section style="margin-bottom: 5rem;">
+                <h2 class="section-title diamonds" style="animation-delay: 0.5s;">
+                    <svg class="icon-lg" style="color: #06b6d4;" viewBox="0 0 24 24">
+                        <path d="M6 3H18L22 9L12 21L2 9L6 3Z"/>
+                    </svg>
+                    DIAMONDS
+                    <svg class="icon-lg" style="color: #06b6d4;" viewBox="0 0 24 24">
+                        <path d="M6 3H18L22 9L12 21L2 9L6 3Z"/>
+                    </svg>
+                </h2>
+                <p class="section-subtitle">Premium Fire Max Diamonds - Instant Delivery, No Survey Required</p>
+                <div class="diamonds-grid">
+                    <div class="card diamond-card" style="animation-delay: 0.1s;">
+                        <div class="card-content">
+                            <svg class="diamond-icon" viewBox="0 0 24 24">
+                                <path d="M6 3H18L22 9L12 21L2 9L6 3Z"/>
+                            </svg>
+                            <h3 class="diamond-amount">100 Diamonds</h3>
+                            <div class="diamond-bonus">+10 Bonus</div>
+                            <div class="diamond-price">Claim Now</div>
+                            <button class="claim-btn diamond-claim-btn" onclick="openModal('100 Diamonds')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                    </svg>
+                                    CLAIM
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card diamond-card popular" style="animation-delay: 0.2s;">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <div class="card-content">
+                            <svg class="diamond-icon" viewBox="0 0 24 24">
+                                <path d="M6 3H18L22 9L12 21L2 9L6 3Z"/>
+                            </svg>
+                            <h3 class="diamond-amount">200 Diamonds</h3>
+                            <div class="diamond-bonus">+50 Bonus</div>
+                            <div class="diamond-price">Claim Now</div>
+                            <button class="claim-btn diamond-claim-btn" onclick="openModal('200 Diamonds')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                    </svg>
+                                    CLAIM
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card diamond-card" style="animation-delay: 0.3s;">
+                        <div class="card-content">
+                            <svg class="diamond-icon" viewBox="0 0 24 24">
+                                <path d="M6 3H18L22 9L12 21L2 9L6 3Z"/>
+                            </svg>
+                            <h3 class="diamond-amount">300 Diamonds</h3>
+                            <div class="diamond-bonus">+100 Bonus</div>
+                            <div class="diamond-price">Claim Now</div>
+                            <button class="claim-btn diamond-claim-btn" onclick="openModal('300 Diamonds')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                    </svg>
+                                    CLAIM
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card diamond-card popular" style="animation-delay: 0.4s;">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <div class="card-content">
+                            <svg class="diamond-icon" viewBox="0 0 24 24">
+                                <path d="M6 3H18L22 9L12 21L2 9L6 3Z"/>
+                            </svg>
+                            <h3 class="diamond-amount">500 Diamonds</h3>
+                            <div class="diamond-bonus">+200 Bonus</div>
+                            <div class="diamond-price">Claim Now</div>
+                            <button class="claim-btn diamond-claim-btn" onclick="openModal('500 Diamonds')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                    </svg>
+                                    CLAIM
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card diamond-card" style="animation-delay: 0.5s;">
+                        <div class="card-content">
+                            <svg class="diamond-icon" viewBox="0 0 24 24">
+                                <path d="M6 3H18L22 9L12 21L2 9L6 3Z"/>
+                            </svg>
+                            <h3 class="diamond-amount">1000 Diamonds</h3>
+                            <div class="diamond-bonus">+500 Bonus</div>
+                            <div class="diamond-price">Claim Now</div>
+                            <button class="claim-btn diamond-claim-btn" onclick="openModal('1000 Diamonds')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                    </svg>
+                                    CLAIM
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card diamond-card" style="animation-delay: 0.6s;">
+                        <div class="card-content">
+                            <svg class="diamond-icon" viewBox="0 0 24 24">
+                                <path d="M6 3H18L22 9L12 21L2 9L6 3Z"/>
+                            </svg>
+                            <h3 class="diamond-amount">2000 Diamonds</h3>
+                            <div class="diamond-bonus">+1000 Bonus</div>
+                            <div class="diamond-price">Claim Now</div>
+                            <button class="claim-btn diamond-claim-btn" onclick="openModal('2000 Diamonds')">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                    </svg>
+                                    CLAIM
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- CTA Section -->
             <section class="cta-section">
                 <div class="cta-card">
@@ -747,7 +1123,7 @@
             <!-- Footer -->
             <footer class="footer">
                 <p>
-                    Free Fire Max Premium Rewards | Free Skins | Free Diamonds | Weekly Rewards | Battle Pass Items | 
+                    Free Fire Max Premium Rewards | Free Skins | Free Diamonds | Daily Rewards | Battle Pass Items | 
                     Legendary Character Outfits | Epic Weapon Skins | Exclusive Emotes | Free Fire Max Generator | 
                     Premium Bundle Claims | No Survey Required | Instant Delivery Guaranteed
                 </p>
@@ -756,8 +1132,8 @@
         <!-- SEO Hidden Content -->
         <div class="seo-content">
             <h1>Free Fire Max Free Rewards Generator 2025</h1>
-            <p>Get free Free Fire Max diamonds, skins, characters, and premium rewards. Claim Weekly free Fire Max rewards, legendary skins, epic outfits, rare emotes, and exclusive battle pass items. Premium Free Fire Max reward generator with instant delivery. No survey, no human verification required. Safe and secure Free Fire Max rewards claim system.</p>
-            <p>Keywords: Free Fire Max rewards, free diamonds, free skins, Free Fire Max generator, premium rewards, legendary skins, epic characters, rare outfits, battle pass free, Weekly rewards, instant delivery, no survey, safe generator, Free Fire Max hack, unlimited diamonds, exclusive skins, character bundles, weapon skins, emotes free, Free Fire Max coins, premium bundle, legendary character, epic weapon, rare bundle, exclusive items, Weekly claims, instant rewards, secure generator, safe rewards, authentic items, premium quality, guaranteed delivery</p>
+            <p>Get free Free Fire Max diamonds, skins, characters, and premium rewards. Claim daily free Fire Max rewards, legendary skins, epic outfits, rare emotes, and exclusive battle pass items. Premium Free Fire Max reward generator with instant delivery. No survey, no human verification required. Safe and secure Free Fire Max rewards claim system.</p>
+            <p>Keywords: Free Fire Max rewards, free diamonds, free skins, Free Fire Max generator, premium rewards, legendary skins, epic characters, rare outfits, battle pass free, daily rewards, instant delivery, no survey, safe generator, Free Fire Max hack, unlimited diamonds, exclusive skins, character bundles, weapon skins, emotes free, Free Fire Max coins, premium bundle, legendary character, epic weapon, rare bundle, exclusive items, daily claims, instant rewards, secure generator, safe rewards, authentic items, premium quality, guaranteed delivery</p>
         </div>
 
         <!-- Modal Popup -->
@@ -765,8 +1141,8 @@
             <div class="modal-content">
                 <h3>Enter Your Free Fire ID</h3>
                 <p>We'll deliver your reward to this account</p>
-                <input type="number" inputmode="numeric" id="ffId" placeholder="Your Free Fire ID (e.g., 123456789)" required>
-                <a id="continueLink" href="https://installchecker.com/cl/i/1x5m7k" target="_blank">
+                <input type="text" id="ffId" placeholder="Your Free Fire ID (e.g., 123456789)" required>
+                <a id="continueLink" href="YOUR_CPA_OFFER_LINK" target="_blank">
                     <button>CONTINUE</button>
                 </a>
             </div>
@@ -859,6 +1235,8 @@
             function openModal(itemName) {
                 modal.style.display = 'flex';
                 setTimeout(() => modal.classList.add('show'), 10);
+                // Optional: Store item name in session or pass via URL
+                // You can modify the CPA link dynamically if needed
             }
 
             // Close modal if clicked outside
