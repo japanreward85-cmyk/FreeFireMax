@@ -13,27 +13,25 @@
     <meta name="twitter:title" content="Free Fire Max Rewards - Free Skins & Diamonds">
     <meta name="twitter:description" content="Get premium Free Fire Max rewards for free! Skins, diamonds, characters & more. No survey required!">
     <link rel="canonical" href="https://your-domain.com">
-    
+    <!-- Added Free Fire official favicon -->
+    <link rel="icon" href="https://www.freefiremobile.com/favicon.ico" type="image/x-icon">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
         }
-
         .container {
             min-height: 100vh;
             background: linear-gradient(135deg, #1e1b4b 0%, #1e3a8a 25%, #3730a3 50%, #4338ca 75%, #6366f1 100%);
             position: relative;
             overflow: hidden;
         }
-
         /* Animated Background Elements */
         .bg-animation {
             position: absolute;
@@ -41,14 +39,12 @@
             overflow: hidden;
             z-index: 1;
         }
-
         .floating-orb {
             position: absolute;
             border-radius: 50%;
             filter: blur(60px);
             animation: float 6s ease-in-out infinite;
         }
-
         .orb-1 {
             top: 25%;
             left: 25%;
@@ -57,7 +53,6 @@
             background: rgba(168, 85, 247, 0.2);
             animation-delay: 0s;
         }
-
         .orb-2 {
             bottom: 25%;
             right: 25%;
@@ -66,7 +61,6 @@
             background: rgba(59, 130, 246, 0.2);
             animation-delay: 1s;
         }
-
         .orb-3 {
             top: 50%;
             left: 50%;
@@ -76,7 +70,6 @@
             background: rgba(236, 72, 153, 0.2);
             animation-delay: 0.5s;
         }
-
         /* Floating Particles */
         .particle {
             position: absolute;
@@ -86,7 +79,6 @@
             border-radius: 50%;
             animation: bounce 3s ease-in-out infinite;
         }
-
         .content {
             position: relative;
             z-index: 10;
@@ -94,7 +86,6 @@
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-
         /* Header Styles */
         .header {
             text-align: center;
@@ -103,7 +94,6 @@
             transform: translateY(40px);
             animation: fadeInUp 1s ease-out forwards;
         }
-
         .main-title {
             font-size: 3.5rem;
             font-weight: 800;
@@ -117,7 +107,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .main-title::after {
             content: '';
             position: absolute;
@@ -128,7 +117,6 @@
             background: #fbbf24;
             animation: blink 1s infinite;
         }
-
         .subtitle {
             font-size: 1.25rem;
             color: #bfdbfe;
@@ -136,7 +124,6 @@
             margin: 0 auto 2rem;
             line-height: 1.7;
         }
-
         .features-row {
             display: flex;
             justify-content: center;
@@ -144,7 +131,6 @@
             flex-wrap: wrap;
             margin-top: 2rem;
         }
-
         .feature-badge {
             display: flex;
             align-items: center;
@@ -154,15 +140,12 @@
             animation: slideInFromLeft 0.8s ease-out;
             transform: translateX(0);
         }
-
         .feature-badge:nth-child(2) {
             animation: slideInFromRight 0.8s ease-out 0.2s both;
         }
-
         .feature-badge:nth-child(3) {
             animation: slideInFromLeft 0.8s ease-out 0.4s both;
         }
-
         /* Section Titles */
         .section-title {
             font-size: 2.5rem;
@@ -177,11 +160,9 @@
             animation: slideInFromLeft 1s ease-out, glow 4s ease-in-out infinite 1s;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
-
         .section-title.diamonds {
             animation: slideInFromRight 1s ease-out, glow 4s ease-in-out infinite 1s;
         }
-
         .section-subtitle {
             font-size: 1.125rem;
             color: #bfdbfe;
@@ -189,34 +170,31 @@
             margin-bottom: 3rem;
             margin-top: -2rem;
         }
-
-        /* Grid Layouts */
+        /* Grid Layouts - Modified for 2x2x2 layout on mobile and desktop */
         .skins-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 5rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .diamonds-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             margin-bottom: 5rem;
-            max-width: 1000px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
-
+        .diamonds-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         /* Card Styles */
         .card {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
             backdrop-filter: blur(20px);
             border-radius: 1.5rem;
-            padding: 2rem;
+            padding: 1.5rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -225,7 +203,6 @@
             transform: translateY(40px);
             animation: fadeInUp 0.8s ease-out forwards;
         }
-
         .card::before {
             content: '';
             position: absolute;
@@ -235,42 +212,35 @@
             opacity: 0;
             transition: opacity 0.5s ease;
         }
-
         .card:hover {
             transform: translateY(-8px) scale(1.02);
             border-color: rgba(168, 85, 247, 0.5);
             box-shadow: 0 25px 50px rgba(168, 85, 247, 0.25);
         }
-
         .card:hover::before {
             opacity: 1;
         }
-
         .card-content {
             position: relative;
             z-index: 10;
         }
-
         .skin-image {
             width: 100%;
             aspect-ratio: 1;
             border-radius: 1rem;
             overflow: hidden;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             background: linear-gradient(135deg, #374151, #1f2937);
         }
-
         .skin-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-
         .card:hover .skin-image img {
             transform: scale(1.1);
         }
-
         .skin-title {
             font-size: 1.125rem;
             font-weight: 700;
@@ -279,11 +249,9 @@
             text-align: center;
             transition: color 0.3s ease;
         }
-
         .card:hover .skin-title {
             color: #c084fc;
         }
-
         .rarity-badge {
             display: inline-flex;
             align-items: center;
@@ -292,38 +260,32 @@
             border-radius: 9999px;
             font-size: 0.875rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
-
         .legendary {
             background: rgba(251, 191, 36, 0.2);
             color: #fcd34d;
             border: 1px solid rgba(251, 191, 36, 0.3);
         }
-
         .epic {
             background: rgba(168, 85, 247, 0.2);
             color: #c084fc;
             border: 1px solid rgba(168, 85, 247, 0.3);
         }
-
         .rare {
             background: rgba(59, 130, 246, 0.2);
             color: #60a5fa;
             border: 1px solid rgba(59, 130, 246, 0.3);
         }
-
         /* Diamond Card Styles */
         .diamond-card {
             text-align: center;
             position: relative;
         }
-
         .diamond-card.popular {
             border-color: rgba(251, 191, 36, 0.5);
             box-shadow: 0 10px 25px rgba(251, 191, 36, 0.25);
         }
-
         .popular-badge {
             position: absolute;
             top: -12px;
@@ -337,71 +299,61 @@
             border-radius: 9999px;
             z-index: 20;
         }
-
         .diamond-icon {
-            width: 4rem;
-            height: 4rem;
+            width: 3.5rem;
+            height: 3.5rem;
             margin: 0 auto 1rem;
             color: #06b6d4;
             animation: pulse 2s ease-in-out infinite;
         }
-
         .diamond-card.popular .diamond-icon {
             color: #fbbf24;
         }
-
         .diamond-amount {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: white;
             margin-bottom: 0.5rem;
             transition: color 0.3s ease;
         }
-
         .card:hover .diamond-amount {
             color: #06b6d4;
         }
-
         .diamond-card.popular:hover .diamond-amount {
             color: #fbbf24;
         }
-
         .diamond-bonus {
-            font-size: 1.125rem;
+            font-size: 1rem;
             font-weight: 600;
             color: #06b6d4;
             margin-bottom: 1rem;
         }
-
         .diamond-card.popular .diamond-bonus {
             color: #fbbf24;
         }
-
         .diamond-price {
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-weight: 800;
             color: #10b981;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
-
         /* Button Styles */
         .claim-btn {
             width: 100%;
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: black;
             font-weight: 700;
-            padding: 1rem 1.5rem;
+            padding: 0.9rem 1.2rem;
             border-radius: 9999px;
             border: none;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             position: relative;
             overflow: hidden;
         }
-
         .claim-btn::before {
             content: '';
             position: absolute;
@@ -410,16 +362,13 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
         .claim-btn:hover {
             transform: translateY(-2px) scale(1.05);
             box-shadow: 0 15px 30px rgba(251, 191, 36, 0.5);
         }
-
         .claim-btn:hover::before {
             opacity: 1;
         }
-
         .claim-btn span {
             position: relative;
             z-index: 10;
@@ -428,33 +377,26 @@
             justify-content: center;
             gap: 0.5rem;
         }
-
         .diamond-claim-btn {
             background: linear-gradient(135deg, #06b6d4, #0891b2);
             color: white;
         }
-
         .diamond-claim-btn::before {
             background: linear-gradient(135deg, #0891b2, #0e7490);
         }
-
         .diamond-claim-btn:hover {
             box-shadow: 0 15px 30px rgba(6, 182, 212, 0.5);
         }
-
         .popular .diamond-claim-btn {
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: black;
         }
-
         .popular .diamond-claim-btn::before {
             background: linear-gradient(135deg, #f59e0b, #d97706);
         }
-
         .popular .diamond-claim-btn:hover {
             box-shadow: 0 15px 30px rgba(251, 191, 36, 0.5);
         }
-
         /* CTA Section */
         .cta-section {
             text-align: center;
@@ -463,7 +405,6 @@
             transform: translateY(40px);
             animation: fadeInUp 1s ease-out 0.9s forwards;
         }
-
         .cta-card {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
             backdrop-filter: blur(20px);
@@ -473,14 +414,12 @@
             max-width: 64rem;
             margin: 0 auto;
         }
-
         .cta-title {
             font-size: 2.5rem;
             font-weight: 700;
             color: white;
             margin-bottom: 1.5rem;
         }
-
         .cta-description {
             font-size: 1.125rem;
             color: #bfdbfe;
@@ -489,14 +428,12 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .cta-buttons {
             display: flex;
             flex-direction: column;
             gap: 1rem;
             align-items: center;
         }
-
         .main-cta-btn {
             background: linear-gradient(135deg, #10b981, #059669);
             color: white;
@@ -510,18 +447,15 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-
         .main-cta-btn:hover {
             transform: translateY(-2px) scale(1.05);
             box-shadow: 0 15px 30px rgba(16, 185, 129, 0.5);
         }
-
         .limited-offer {
             color: #fcd34d;
             font-weight: 600;
             font-size: 1rem;
         }
-
         /* Features Section */
         .features-section {
             margin-bottom: 4rem;
@@ -529,7 +463,6 @@
             transform: translateY(40px);
             animation: fadeInUp 1s ease-out 1.2s forwards;
         }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -537,7 +470,6 @@
             max-width: 72rem;
             margin: 0 auto;
         }
-
         .feature-card {
             text-align: center;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
@@ -547,30 +479,25 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.5s ease;
         }
-
         .feature-card:hover {
             transform: translateY(-5px) scale(1.02);
             border-color: rgba(168, 85, 247, 0.5);
         }
-
         .feature-icon {
             width: 3rem;
             height: 3rem;
             margin: 0 auto 1rem;
             animation: pulse 2s ease-in-out infinite;
         }
-
         .feature-title {
             font-size: 1.25rem;
             font-weight: 700;
             color: white;
             margin-bottom: 0.75rem;
         }
-
         .feature-description {
             color: #bfdbfe;
         }
-
         /* Footer */
         .footer {
             text-align: center;
@@ -580,7 +507,6 @@
             transform: translateY(40px);
             animation: fadeInUp 1s ease-out 1.5s forwards;
         }
-
         /* SEO Hidden Content */
         .seo-content {
             position: absolute;
@@ -589,18 +515,15 @@
             height: 1px;
             overflow: hidden;
         }
-
         /* Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
-
         @keyframes bounce {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -611,12 +534,10 @@
                 transform: translateY(0);
             }
         }
-
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
         }
-
         @keyframes slideInFromLeft {
             from {
                 opacity: 0;
@@ -627,7 +548,6 @@
                 transform: translateX(0);
             }
         }
-
         @keyframes slideInFromRight {
             from {
                 opacity: 0;
@@ -638,7 +558,6 @@
                 transform: translateX(0);
             }
         }
-
         @keyframes glow {
             0%, 100% {
                 text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
@@ -647,7 +566,6 @@
                 text-shadow: 0 0 30px rgba(251, 191, 36, 0.8), 0 0 40px rgba(168, 85, 247, 0.6);
             }
         }
-
         @keyframes scaleIn {
             from {
                 opacity: 0;
@@ -658,67 +576,86 @@
                 transform: scale(1);
             }
         }
-
         @keyframes typewriter {
             from { width: 0; }
             to { width: 100%; }
         }
-
         @keyframes blink {
             0%, 50% { border-color: transparent; }
             51%, 100% { border-color: #fbbf24; }
         }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .main-title {
                 font-size: 2.5rem;
             }
-
             .section-title {
                 font-size: 2rem;
                 flex-direction: column;
                 gap: 0.5rem;
             }
-
             .features-row {
                 flex-direction: column;
                 align-items: center;
             }
-
             .cta-card {
                 padding: 2rem;
             }
-
             .cta-title {
                 font-size: 2rem;
             }
-
+            /* Ensure 2x2 layout on mobile */
             .skins-grid,
             .diamonds-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 500px;
+                gap: 1.2rem;
+            }
+            .card {
+                padding: 1.3rem;
+            }
+            .diamond-icon {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            .claim-btn {
+                padding: 0.8rem 1.1rem;
+                font-size: 0.9rem;
             }
         }
-
         @media (max-width: 480px) {
             .content {
                 padding: 1rem;
             }
-
             .main-title {
                 font-size: 2rem;
             }
-
             .subtitle {
                 font-size: 1rem;
             }
-
+            .skins-grid,
+            .diamonds-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 100%;
+                gap: 1rem;
+            }
             .card {
-                padding: 1.5rem;
+                padding: 1.2rem;
+            }
+            .skin-title {
+                font-size: 1.05rem;
+            }
+            .diamond-amount {
+                font-size: 1.3rem;
+            }
+            .diamond-price {
+                font-size: 1.5rem;
+            }
+            .claim-btn {
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
             }
         }
-
         /* Icon Styles */
         .icon {
             display: inline-block;
@@ -728,12 +665,10 @@
             stroke-width: 2;
             fill: none;
         }
-
         .icon-lg {
             width: 2rem;
             height: 2rem;
         }
-
         .icon-xl {
             width: 3rem;
             height: 3rem;
@@ -748,10 +683,8 @@
             <div class="floating-orb orb-2"></div>
             <div class="floating-orb orb-3"></div>
         </div>
-
         <!-- Floating Particles -->
         <div class="bg-animation" id="particles"></div>
-
         <div class="content">
             <!-- Header Section -->
             <header class="header">
@@ -789,7 +722,6 @@
                     </div>
                 </div>
             </header>
-
             <!-- Skins Section -->
             <section style="margin-bottom: 5rem;">
                 <h2 class="section-title" style="animation-delay: 0.3s;">
@@ -802,7 +734,6 @@
                     </svg>
                 </h2>
                 <p class="section-subtitle">Exclusive Free Fire Max Skins - Legendary, Epic & Rare Character Outfits Available</p>
-                
                 <div class="skins-grid">
                     <div class="card" style="animation-delay: 0.1s;">
                         <div class="card-content">
@@ -826,7 +757,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card" style="animation-delay: 0.2s;">
                         <div class="card-content">
                             <div class="skin-image">
@@ -849,7 +779,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card" style="animation-delay: 0.3s;">
                         <div class="card-content">
                             <div class="skin-image">
@@ -872,7 +801,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card" style="animation-delay: 0.4s;">
                         <div class="card-content">
                             <div class="skin-image">
@@ -895,7 +823,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card" style="animation-delay: 0.5s;">
                         <div class="card-content">
                             <div class="skin-image">
@@ -918,7 +845,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card" style="animation-delay: 0.6s;">
                         <div class="card-content">
                             <div class="skin-image">
@@ -943,7 +869,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- Diamonds Section -->
             <section style="margin-bottom: 5rem;">
                 <h2 class="section-title diamonds" style="animation-delay: 0.5s;">
@@ -956,7 +881,6 @@
                     </svg>
                 </h2>
                 <p class="section-subtitle">Premium Fire Max Diamonds - Instant Delivery, No Survey Required</p>
-                
                 <div class="diamonds-grid">
                     <div class="card diamond-card" style="animation-delay: 0.1s;">
                         <div class="card-content">
@@ -976,7 +900,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card diamond-card popular" style="animation-delay: 0.2s;">
                         <div class="popular-badge">MOST POPULAR</div>
                         <div class="card-content">
@@ -996,7 +919,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card diamond-card" style="animation-delay: 0.3s;">
                         <div class="card-content">
                             <svg class="diamond-icon" viewBox="0 0 24 24">
@@ -1015,7 +937,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card diamond-card popular" style="animation-delay: 0.4s;">
                         <div class="popular-badge">MOST POPULAR</div>
                         <div class="card-content">
@@ -1035,7 +956,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card diamond-card" style="animation-delay: 0.5s;">
                         <div class="card-content">
                             <svg class="diamond-icon" viewBox="0 0 24 24">
@@ -1054,7 +974,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="card diamond-card" style="animation-delay: 0.6s;">
                         <div class="card-content">
                             <svg class="diamond-icon" viewBox="0 0 24 24">
@@ -1075,7 +994,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- CTA Section -->
             <section class="cta-section">
                 <div class="cta-card">
@@ -1099,7 +1017,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- Features Section -->
             <section class="features-section">
                 <div class="features-grid">
@@ -1110,7 +1027,6 @@
                         <h3 class="feature-title">Instant Delivery</h3>
                         <p class="feature-description">Get your Free Fire Max rewards delivered instantly to your account. No waiting, no delays!</p>
                     </div>
-                    
                     <div class="feature-card">
                         <svg class="feature-icon" style="color: #a855f7;" viewBox="0 0 24 24">
                             <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
@@ -1118,7 +1034,6 @@
                         <h3 class="feature-title">Premium Quality</h3>
                         <p class="feature-description">Authentic Free Fire Max skins and diamonds. Guaranteed safe and secure for your account.</p>
                     </div>
-                    
                     <div class="feature-card">
                         <svg class="feature-icon" style="color: #10b981;" viewBox="0 0 24 24">
                             <path d="M20 12V8H6A2 2 0 0 1 4 6V4A2 2 0 0 1 6 2H12V4H6V6H20V8H6A2 2 0 0 0 4 10V18A2 2 0 0 0 6 20H20A2 2 0 0 0 22 18V12A2 2 0 0 0 20 10Z"/>
@@ -1128,7 +1043,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- Footer -->
             <footer class="footer">
                 <p>
@@ -1138,7 +1052,6 @@
                 </p>
             </footer>
         </div>
-
         <!-- SEO Hidden Content -->
         <div class="seo-content">
             <h1>Free Fire Max Free Rewards Generator 2025</h1>
@@ -1146,7 +1059,6 @@
             <p>Keywords: Free Fire Max rewards, free diamonds, free skins, Free Fire Max generator, premium rewards, legendary skins, epic characters, rare outfits, battle pass free, daily rewards, instant delivery, no survey, safe generator, Free Fire Max hack, unlimited diamonds, exclusive skins, character bundles, weapon skins, emotes free, Free Fire Max coins, premium bundle, legendary character, epic weapon, rare bundle, exclusive items, daily claims, instant rewards, secure generator, safe rewards, authentic items, premium quality, guaranteed delivery</p>
         </div>
     </div>
-
     <script>
         // Create floating particles
         function createParticles() {
@@ -1161,7 +1073,6 @@
                 particlesContainer.appendChild(particle);
             }
         }
-
         // Add click effects to buttons
         function addButtonEffects() {
             const buttons = document.querySelectorAll('.claim-btn, .main-cta-btn');
@@ -1173,7 +1084,6 @@
                     const size = Math.max(rect.width, rect.height);
                     const x = e.clientX - rect.left - size / 2;
                     const y = e.clientY - rect.top - size / 2;
-                    
                     ripple.style.width = ripple.style.height = size + 'px';
                     ripple.style.left = x + 'px';
                     ripple.style.top = y + 'px';
@@ -1183,16 +1093,13 @@
                     ripple.style.transform = 'scale(0)';
                     ripple.style.animation = 'ripple 0.6s linear';
                     ripple.style.pointerEvents = 'none';
-                    
                     this.appendChild(ripple);
-                    
                     setTimeout(() => {
                         ripple.remove();
                     }, 600);
                 });
             });
         }
-
         // Add ripple animation
         const style = document.createElement('style');
         style.textContent = `
@@ -1202,20 +1109,17 @@
                     opacity: 0;
                 }
             }
-            
             .claim-btn, .main-cta-btn {
                 position: relative;
                 overflow: hidden;
             }
         `;
         document.head.appendChild(style);
-
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             createParticles();
             addButtonEffects();
         });
-
         // Add smooth scrolling for better UX
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
